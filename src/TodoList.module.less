@@ -1,0 +1,82 @@
+@import './variable.less';
+
+.FieldContainer {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.AddTodoItemModalMask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.45);
+  box-shadow: @box-shadow;
+
+  .AddTodoItemModalContainer {
+    background-color: #fff;
+    padding: 1em 2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .AddTodoItemModalFooter {
+      display: flex;
+      gap: 1em;
+      align-self: flex-end;
+    }
+  }
+}
+
+.TodoListContainer {
+  margin: 2em auto;
+  width: fit-content;
+  min-height: 50vh;
+  border-radius: 1em;
+  padding: 1em 2em;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: @box-shadow;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .TodoListHeader {
+    display: flex;
+    gap: 1em;
+  }
+
+  .TodoListMainContainer {
+    .TodoListTable {
+      border: @border;
+      border-collapse: collapse;
+
+      th {
+        padding: 1em;
+        background-color: @primary-color;
+        color: #fff;
+      }
+
+      td {
+        padding: 1em;
+      }
+
+      tr {
+        border-bottom: @border;
+      }
+    }
+  }
+
+  .AddTodoItemButton {
+    align-self: flex-end;
+  }
+}
